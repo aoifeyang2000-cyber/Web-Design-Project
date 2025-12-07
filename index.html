@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<!--Café Anima - Home Page Purpose: Landing page introducing the café and directing users to book or view the menu.-->
   <head>
     <title>Café Anima | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	  
+<!--SEO description for search engines and social previews.-->
     <meta name="description" content="Café Anima serves specialty coffee, fresh pastries, and brunch.">
 
     <!-- Bootstrap CSS -->
@@ -17,13 +19,19 @@
 
   </head>
   <body>
-    <!-- Navbar -->
+    <!--Global navigation bar: On every page for consistent navigation.-->
+	  
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
       <div class="container">
+		  
+		<!-- Cafe Name -->
         <a class="navbar-brand fw-bold" href="index.html">Café Anima</a>
+		<!-- Collapsed hamburger menu for mobile devices -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+		<!-- Navigation links -->
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -36,10 +44,13 @@
       </div>
     </nav>
 
-    <!-- Hero -->
+    <!--Main visual section with headline, short description and buttons.-->
+	  
     <header class="hero d-flex align-items-center" id="top">
       <div class="container text-center text-md-start">
         <div class="row align-items-center">
+			
+		  <!-- Headline + Buttons -->
           <div class="col-md-6">
             <h1 class="display-4 fw-bold mb-3">
               Enjoy your time at <span class="text-primary">Café Anima</span>
@@ -47,9 +58,13 @@
             <p class="lead mb-4">
               Specialty coffee, warm pastries and lazy weekend brunch – right in the heart of Athlone.
             </p>
+			<!-- Booking -->
             <a href="booking.html" class="btn btn-primary btn-lg me-2">Book a Table</a>
+			<!-- Menu -->
             <a href="menu.html" class="btn btn-outline-secondary btn-lg">View Menu</a>
           </div>
+
+		  <!-- Coffee Image -->
           <div class="col-md-6 mt-4 mt-md-0">
             <img src="images/Coffee.jpg" class="img-fluid rounded shadow" alt="Coffee and pastries on a table">
           </div>
@@ -57,7 +72,7 @@
       </div>
     </header>
 
-    <!-- Christmas Specials -->
+    <!-- Christmas Specials - controlled by Javascript - initSpecial() -->
     <section class="py-5 bg-light">
       <div class="container">
         <h2 class="mb-4 text-center">Christmas Specials</h2>
@@ -65,7 +80,7 @@
       </div>
     </section>
 
-    <!-- Why People Love Us -->
+    <!-- Why People Love Us - cards highlighting Cafe Anima's selling points-->
     <section class="py-5">
       <div class="container">
         <h2 class="mb-4 text-center">Why People Love Us</h2>
@@ -111,3 +126,4 @@
     <script src="js/script.js"></script>
   </body>
 </html>
+
