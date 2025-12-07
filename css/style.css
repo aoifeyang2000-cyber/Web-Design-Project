@@ -1,20 +1,31 @@
+/* ============================================================
+   Café Anima
+   Purpose:
+   - Define brand colours and typography
+   - Style shared components (navbar, hero, buttons, cards, footer)
+   - Add responsive tweaks for small screens
+   ============================================================ */
 
+/* ---------- CSS Custom Properties (brand colours) ---------- */
 :root {
-  --coffee-brown: #4b2e2b;
-  --latte-cream: #f7efe6;
-  --ink: #222;
+  --coffee-brown: #4b2e2b;  /* Primary brand colour */
+  --latte-cream: #f7efe6;   /* Soft background for sections/buttons */
+  --ink: #222;              /* Default text colour */
 }
 
+/* Reset box-sizing for predictable layouts */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Enable smooth scrolling for in-page anchors (#top etc.) */
 html {
   scroll-behavior: smooth;
 }
 
+/* Base body styles */
 body {
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f8f5f1;
@@ -22,22 +33,26 @@ body {
   margin: 0;
 }
 
-/* Headings use Playfair for a café vibe */
+/* Headings use Playfair Display for a café / editorial vibe */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
-/* Basic links */
+/* Simple link reset (leave colour to be set by context) */
 a {
   text-decoration: none;
 }
 
-/* ============ NAVBAR ============ */
+/* ============================================================
+   NAVBAR
+   Shared navigation bar styling
+   ============================================================ */
 
 .navbar {
   background-color: #ffffff !important;
 }
 
+/* Brand styling: uppercase, tracking for a logo feel */
 .navbar-brand {
   color: var(--coffee-brown) !important;
   letter-spacing: 0.06em;
@@ -49,35 +64,45 @@ a {
   color: #3a2220 !important;
 }
 
+/* Navigation links */
 .nav-link {
   font-weight: 500;
   color: #555 !important;
 }
 
+/* Highlight active and hovered nav links with brand colour */
 .nav-link.active,
 .nav-link:hover {
   color: var(--coffee-brown) !important;
 }
 
+/* Ensure main content always occupies at least some height */
 main {
   min-height: 60vh;
 }
 
-/* ============ (HOME PAGE) ============ */
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
 
+/* Full-height with gradient background */
 .hero {
   min-height: 90vh;
-  padding-top: 90px; 
+  padding-top: 90px;  /* Offset for fixed navbar */
   padding-bottom: 60px;
   background: linear-gradient(120deg, #fefaf6, var(--latte-cream));
 }
 
+/* Highlighted word inside hero heading */
 .hero .display-4 span {
   color: var(--coffee-brown);
 }
 
-/* ============ BUTTONS ============ */
+/* ============================================================
+   BUTTON STYLING (Primary & Outline)
+   ============================================================ */
 
+/* Primary button uses the coffee-brown brand colour */
 .btn-primary {
   background-color: var(--coffee-brown);
   border-color: var(--coffee-brown);
@@ -89,6 +114,7 @@ main {
   border-color: #3a2220;
 }
 
+/* Outline button that inverts to filled on hover */
 .btn-outline-secondary {
   border-color: var(--coffee-brown);
   color: var(--coffee-brown);
@@ -100,7 +126,12 @@ main {
   color: #fff;
 }
 
-/* Filter buttons on menu page */
+/* ---------- Filter buttons on menu page ---------- */
+
+/*
+  Rounded category filters on menu.html.
+  JS toggles the .active class when a filter is selected.
+*/
 .filter-btn {
   border-radius: 999px;
   padding-inline: 1.2rem;
@@ -112,42 +143,49 @@ main {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Hover effect */
+/* Hover effect for filters */
 .filter-btn:hover {
   background-color: var(--coffee-brown);
   color: var(--latte-cream);
   border-color: var(--coffee-brown);
 }
 
-/* Active (selected) button */
+/* Selected/active filter state */
 .filter-btn.active {
   background-color: var(--coffee-brown) !important;
   color: var(--latte-cream) !important;
   border-color: var(--coffee-brown) !important;
 }
 
-/* ============ CARDS & SECTIONS ============ */
+/* ============================================================
+   CARDS & GENERIC SECTIONS
+   ============================================================ */
 
+/* Soft, rounded cards used across the site */
 .card {
   border: none;
   border-radius: 1rem;
 }
 
+/* Slightly larger padding for comfortable reading */
 .card-body {
   padding: 1.5rem 1.75rem;
 }
 
+/* Provide scroll offset for anchored sections (if used) */
 section {
   scroll-margin-top: 80px;
 }
 
-/* ============ FOOTER ============ */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 footer {
   font-size: 0.9rem;
 }
 
-/* Back-to-top fade behaviour */
+/* Back-to-top button fades in/out based on scroll position */
 #back-to-top.invisible {
   opacity: 0;
   pointer-events: none;
@@ -157,8 +195,14 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* ============ BOOKING PAGE ============ */
+/* ============================================================
+   BOOKING PAGE (Form-specific styling)
+   ============================================================ */
 
+/*
+  Remove default glow and highlight invalid fields using
+  Bootstrap's .is-invalid class.
+*/
 #booking-form .form-control:is(:focus, .is-invalid) {
   box-shadow: none;
 }
@@ -167,17 +211,19 @@ footer {
   border-color: #dc3545;
 }
 
-/* Character counter styling */
+/* Character counter under the textarea */
 #char-count {
   font-size: 0.85rem;
 }
 
-/* Open/closed badge */
+/* Badge that displays "We're open" / "We're closed" */
 #open-status {
   font-size: 0.9rem;
 }
 
-/* ============ MENU PAGE ============ */
+/* ============================================================
+   MENU PAGE (Menu card tweaks)
+   ============================================================ */
 
 #menu-items .card h2.h5 {
   margin-bottom: 0.5rem;
@@ -187,11 +233,12 @@ footer {
   margin-bottom: 0.4rem;
 }
 
-
-
-/* ============ RESPONSIVE ============ */
+/* ============================================================
+   RESPONSIVE BEHAVIOUR (Mobile tweaks)
+   ============================================================ */
 
 @media (max-width: 767.98px) {
+  /* Center hero content on small screens */
   .hero {
     text-align: center;
   }
@@ -200,13 +247,18 @@ footer {
     margin-top: 1.5rem;
   }
 
+  /* Slightly smaller brand name on narrow screens */
   .navbar-brand {
     font-size: 1rem;
   }
-  
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='rgba(0,0,0,0.7)' viewBox='0 0 30 30'%3E%3Cpath stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-body { overflow-x: hidden; }
 
+  /* Custom burger icon colour to improve contrast */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='rgba(0,0,0,0.7)' viewBox='0 0 30 30'%3E%3Cpath stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  /* Prevent horizontal scrolling on small devices */
+  body {
+    overflow-x: hidden;
+  }
 }
