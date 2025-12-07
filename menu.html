@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+  <title>Café Anima | Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Explore Café Anima's menu in Athlone: breakfast, brunch, desserts, pastries and speciality drinks.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+<body id="top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Café Anima</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="brunch.html">Breakfast & Brunch</a></li>
+          <li class="nav-item"><a class="nav-link" href="desserts.html">Desserts & Pastries</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Book & Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5 mt-5">
+    <div class="container">
+      <h1 class="mb-4 text-center">Our Menu</h1>
+
+      <div class="text-center mb-4">
+        <button class="btn me-2 filter-btn active" data-category="all">All</button>
+        <button class="btn me-2 filter-btn" data-category="breakfast">Breakfast</button>
+        <button class="btn me-2 filter-btn" data-category="brunch">Brunch</button>
+        <button class="btn me-2 filter-btn" data-category="dessert">Desserts</button>
+        <button class="btn me-2 filter-btn" data-category="pastry">Pastries</button>
+        <button class="btn filter-btn" data-category="drinks">Drinks</button>
+      </div>
+	  <div class="alert alert-info mt-3 text-center">
+	     Tap a filter button to narrow down menu items.
+	  </div>
+
+      <!-- Menu items-->
+      <div class="row g-4" id="menu-items">
+        <!-- Breakfast -->
+        <div class="col-md-4 menu-item" data-category="breakfast">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Build Your Own Pancakes</h2>
+              <p>Fluffy pancake stack with your choice of berries, banana, Nutella, maple syrup or whipped cream.</p>
+              <p class="fw-bold">€8.50</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="breakfast">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Classic Anima Fry</h2>
+              <p>Free range eggs, grilled sausages, smoked bacon, hash browns, roasted tomato, mushrooms and sourdough toast.</p>
+              <p class="fw-bold">€11.90</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="breakfast">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Sensation Granola Bowl</h2>
+              <p>Homemade granola with Greek yoghurt, seasonal fruit, honey, toasted seeds and a touch of açaí.</p>
+              <p class="fw-bold">€9.20</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brunch -->
+        <div class="col-md-4 menu-item" data-category="brunch">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Avocado Toast</h2>
+              <p>Sourdough toast with smashed avocado, poached egg, chorizo flakes and chilli oil.</p>
+              <p class="fw-bold">€12.50</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="brunch">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Anima Brunch Stack</h2>
+              <p>Buttermilk waffles with crispy fried chicken and hot chilli jam.</p>
+              <p class="fw-bold">€13.50</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="brunch">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Asian Brunch Bowl</h2>
+              <p>Roasted sweet potato, marinated tofu, chicken leg mushrooms, edamame and brown rice.</p>
+              <p class="fw-bold">€12.30</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="col-md-4 menu-item" data-category="dessert">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Chocolate Lava Cake</h2>
+              <p>Warm chocolate cake with a gooey centre and vanilla ice cream.</p>
+              <p class="fw-bold">€6.90</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="dessert">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Lemon Tart</h2>
+              <p>Sharp lemon curd in a buttery pastry shell, topped with torched meringue.</p>
+              <p class="fw-bold">€6.40</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="dessert">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Sticky Toffee Pudding</h2>
+              <p>Rich date sponge with warm toffee sauce and vanilla bean ice cream.</p>
+              <p class="fw-bold">€7.20</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASTRIES -->
+        <div class="col-md-4 menu-item" data-category="pastry">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Almond Croissant</h2>
+              <p>Buttery croissant filled with almond cream, topped with flaked almonds and icing sugar.</p>
+              <p class="fw-bold">€3.90</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="pastry">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Cinnamon Bun</h2>
+              <p>Soft roll swirled with cinnamon sugar and finished with vanilla cream cheese icing.</p>
+              <p class="fw-bold">€4.10</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="pastry">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Focaccia Slice</h2>
+              <p>Olive oil focaccia topped with cherry tomatoes, sea salt and rosemary.</p>
+              <p class="fw-bold">€4.50</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DRINKS -->
+        <div class="col-md-4 menu-item" data-category="drinks">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Cappuccino</h2>
+              <p>Double espresso with steamed milk and silky foam.</p>
+              <p class="fw-bold">€3.40</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="drinks">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Matcha Latte</h2>
+              <p>Ceremonial grade matcha whisked with your choice of milk, lightly sweetened with honey.</p>
+              <p class="fw-bold">€4.10</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="drinks">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Fresh Orange Juice</h2>
+              <p>Freshly squeezed Oranges, served chilled.</p>
+              <p class="fw-bold">€3.80</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="drinks">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Apple Juice</h2>
+              <p>Pressed Irish apples for a crisp, refreshing juice.</p>
+              <p class="fw-bold">€3.60</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 menu-item" data-category="drinks">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5">Green Glow Juice</h2>
+              <p>Kiwi, matcha and apple blended into a bright green boost.</p>
+              <p class="fw-bold">€4.50</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-light">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 Café Anima. All rights reserved.</p>
+      <a href="#top" class="btn btn-sm btn-outline-light" id="back-to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
