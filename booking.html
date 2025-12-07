@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+  <title>Café Anima | Book & Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Book a table at Café Anima on Wicklow Street, Athlone. Enjoy a warm cup of coffee, brunch and fresh pastries.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+<body id="top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Café Anima</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="brunch.html">Breakfast & Brunch</a></li>
+          <li class="nav-item"><a class="nav-link" href="desserts.html">Desserts & Pastries</a></li>
+          <li class="nav-item"><a class="nav-link active" href="booking.html">Book & Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5 mt-5">
+    <div class="container">
+      <h1 class="mb-4 text-center">Book a Table</h1>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <form id="booking-form" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" pattern="^[0-9+\-\s]{7,}$" required>
+              <div class="invalid-feedback">Please enter a valid phone number.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date" required>
+              <div class="invalid-feedback">Please choose a date.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="time" class="form-label">Time</label>
+              <input type="time" class="form-control" id="time" required>
+              <div class="invalid-feedback">Please select a time within the opening hours.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="guests" class="form-label">Number of Guests</label>
+              <input type="number" class="form-control" id="guests" min="1" max="10" required>
+              <div class="invalid-feedback">We accept bookings for 1–10 guests.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="requests" class="form-label">Special Requests (optional)</label>
+              <textarea class="form-control" id="requests" rows="3" maxlength="200"></textarea>
+              <small id="char-count" class="text-muted">0 / 200 characters</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Booking</button>
+            <div id="booking-success" class="alert alert-success mt-3 d-none">
+              Thank you! Your booking request has been received. You will receive an email notification shortly.
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+		<h2>Find Us</h2>
+		<p>13 Wicklow Street, just off Gleeson Street,<br>Athlone, Co. Westmeath</p>
+          <p><strong>Opening hours:</strong><br>
+            Mon–Fri: 8:00 – 16:00<br>
+            Sat–Sun: 9:00 – 17:00
+          </p>
+          <p><span id="open-status" class="badge bg-secondary"></span></p>
+
+          <div class="ratio ratio-4x3">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.4946179836525!2d-7.9382043238874225!3d53.423863968921324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485c4904306f9b67%3A0x31e7b766c023d8fc!2sHarvest%20Homemade!5e0!3m2!1sen!2sie!4v1764780190390!5m2!1sen!2sie"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Maps - Café Anima"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-light">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 Café Anima. All rights reserved.</p>
+      <a href="#top" class="btn btn-sm btn-outline-light" id="back-to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
